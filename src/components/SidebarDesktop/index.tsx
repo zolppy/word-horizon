@@ -11,7 +11,7 @@ import { FaBed } from "react-icons/fa6";
 
 export function SidebarDesktop() {
   return (
-    <nav className="h-screen bg-green-500 hidden lg:block w-[300px]">
+    <nav className="h-screen bg-purple-700 hidden lg:block w-[300px]">
       <CategoryList>
         <CategoryItem>
           <FaHouse /> Home
