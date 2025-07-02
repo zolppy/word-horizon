@@ -1,7 +1,15 @@
+import { Header } from "./components/Header";
+import { Sidebar } from "./components/Sidebar";
+import { SidebarDesktop } from "./components/SidebarDesktop";
+
 function App() {
   return (
     <>
-      <h1 className="font-bold text-4xl text-red-500">Ikigai</h1>
+      <Header />
+      <main>
+        <Sidebar />
+        <SidebarDesktop />
+      </main>
     </>
   );
 }
