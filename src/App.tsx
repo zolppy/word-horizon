@@ -8,12 +8,11 @@ function App() {
   return (
     <>
       <Header />
-      <main>
-        <Sidebar />
-        <SidebarDesktop />
-
+      <Sidebar />
+      <SidebarDesktop />
+      <main className="lg:ml-[300px] p-4">
         <section>
-          <div className="">
+          <div>
             {Categorias.map(({ id, img, titulo }) => (
               <Card key={id} img={img} titulo={titulo} />
             ))}

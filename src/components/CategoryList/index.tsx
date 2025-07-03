@@ -6,6 +6,10 @@ interface CategoryListProps {
 
 export function CategoryList({ children }: CategoryListProps) {
   return (
-    <ul className="mt-20 lg:mt-0 p-8 flex flex-col gap-y-4">{children}</ul>
+    <ul className="mt-20 lg:mt-0 p-8 flex flex-col gap-y-4 text-white">
+      {children}
+    </ul>
   );
 }
+
+CategoryList.displayName = "CategoryList";

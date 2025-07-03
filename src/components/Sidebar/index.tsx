@@ -63,3 +63,5 @@ export function Sidebar() {
     </AnimatePresence>
   );
 }
+
+Sidebar.displayName = "Sidebar";

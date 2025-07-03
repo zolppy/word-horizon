@@ -11,3 +11,5 @@ export function CategoryItem({ children }: CategoryItemProps) {
     </li>
   );
 }
+
+CategoryItem.displayName = "CategoryItem";
