@@ -1,42 +1,36 @@
+"use client";
+
 import { createContext, useContext, useState, type ReactNode } from "react";
+import { Category } from "../utils/enums/category";
 
 interface SidebarCtxValue {
-  sidebarIsOpen: boolean;
-  openSidebar(): void;
-  closeSidebar(): void;
+  currentCategory: Category;
+  changeCategory(category: Category): void;
 }
-
-const SidebarCtx = createContext<SidebarCtxValue | null>(null);
 
 interface SidebarProviderProps {
   children: ReactNode;
 }
 
+const SidebarCtx = createContext<SidebarCtxValue | null>(null);
+
 function SidebarProvider({ children }: SidebarProviderProps) {
-  const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
+  const [currentCategory, setCurrentCategory] = useState<Category>(
+    Category.Home
+  );
 
-  function openSidebar() {
-    setSidebarIsOpen(true);
-  }
-
-  function closeSidebar() {
-    setSidebarIsOpen(false);
+  function changeCategory(category: Category): void {
+    setCurrentCategory(category);
   }
 
   return (
-    <SidebarCtx.Provider
-      value={{
-        sidebarIsOpen,
-        openSidebar,
-        closeSidebar,
-      }}
-    >
+    <SidebarCtx.Provider value={{ currentCategory, changeCategory }}>
       {children}
     </SidebarCtx.Provider>
   );
 }
 
-function useSidebar() {
+function useSidebar(): SidebarCtxValue {
   const ctx = useContext(SidebarCtx);
 
   if (!ctx) {
