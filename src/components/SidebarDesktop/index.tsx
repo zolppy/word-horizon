@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { CategoryList } from "../CategoryList";
 import { CategoryItem } from "../CategoryItem";
 import { FaHouse } from "react-icons/fa6";
@@ -13,28 +14,28 @@ export function SidebarDesktop() {
   return (
     <nav className="h-screen bg-purple-700 fixed hidden lg:block w-[300px]">
       <CategoryList>
-        <CategoryItem>
+        <CategoryItem className={clsx(true && "bg-white text-purple-700")}>
           <FaHouse /> Home
         </CategoryItem>
-        <CategoryItem>
+        <CategoryItem className={clsx(false && "bg-white text-purple-700")}>
           <FaDog /> Animais
         </CategoryItem>
-        <CategoryItem>
+        <CategoryItem className={clsx(false && "bg-white text-purple-700")}>
           <FaPerson /> Corpo
         </CategoryItem>
-        <CategoryItem>
+        <CategoryItem className={clsx(false && "bg-white text-purple-700")}>
           <FaKitchenSet /> Cozinha
         </CategoryItem>
-        <CategoryItem>
+        <CategoryItem className={clsx(false && "bg-white text-purple-700")}>
           <FaBook /> Escola
         </CategoryItem>
-        <CategoryItem>
+        <CategoryItem className={clsx(false && "bg-white text-purple-700")}>
           <FaUserGroup /> Família
         </CategoryItem>
-        <CategoryItem>
+        <CategoryItem className={clsx(false && "bg-white text-purple-700")}>
           <FaBed /> Quarto
         </CategoryItem>
-        <CategoryItem>
+        <CategoryItem className={clsx(false && "bg-white text-purple-700")}>
           <FaShirt /> Roupas
         </CategoryItem>
       </CategoryList>

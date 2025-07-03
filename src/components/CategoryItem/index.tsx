@@ -1,12 +1,15 @@
-import type { ReactNode } from "react";
+import type { HTMLAttributes, ReactNode } from "react";
+import { type ClassNameValue, twMerge } from "tailwind-merge";
 
-interface CategoryItemProps {
+interface CategoryItemProps extends HTMLAttributes<HTMLLIElement> {
   children: ReactNode;
 }
 
-export function CategoryItem({ children }: CategoryItemProps) {
+export function CategoryItem({ children, className = "" }: CategoryItemProps) {
+  const baseStyles = "flex items-center text-4xl gap-x-4 whitespace-nowrap p-2";
+
   return (
-    <li className="flex items-center text-4xl gap-x-4 whitespace-nowrap">
+    <li className={twMerge(baseStyles, className as ClassNameValue)}>
       {children}
     </li>
   );
