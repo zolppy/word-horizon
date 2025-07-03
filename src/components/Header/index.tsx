@@ -8,7 +8,7 @@ export function Header() {
   const { closeMenu, menuIsOpen, openMenu } = useMenu();
 
   return (
-    <header className="flex bg-black justify-between lg:justify-center items-center p-4 h-20">
+    <header className="flex bg-black justify-between lg:justify-center items-center p-4 h-20 fixed w-full top-0">
       {menuIsOpen ? (
         <Btn onClick={closeMenu}>
           <FaXmark className="text-2xl z-20 lg:hidden text-white" />

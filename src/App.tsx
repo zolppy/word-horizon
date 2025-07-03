@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Sidebar />
       <SidebarDesktop />
-      <main className="lg:ml-[300px] p-4">
+      <main className="lg:ml-[300px] p-4 mt-20">
         <section>
           <div>
             {Categorias.map(({ id, img, titulo }) => (
