@@ -2,33 +2,26 @@ import { Header } from "./components/Header";
 import { Sidebar } from "./components/Sidebar";
 import { SidebarDesktop } from "./components/SidebarDesktop";
 import { Card } from "./components/Card";
-import { CategoriaDestaque } from "./components/utils/mocks/dest";
+import { Categorias } from "./utils/data/categorias";
 
 function App() {
-    return (
-        <>
-            <Header />
-            <main>
-                <Sidebar />
-                <SidebarDesktop />
+  return (
+    <>
+      <Header />
+      <main>
+        <Sidebar />
+        <SidebarDesktop />
 
-                <section>
-                    <div className="">
-                        {CategoriaDestaque.map(
-                            ({ id, img1, descricao1, som1 }) => (
-                                <Card
-                                    key={id}
-                                    img1={img1}
-                                    descricao1={descricao1}
-                                    som1={som1}
-                                />
-                            )
-                        )}
-                    </div>
-                </section>
-            </main>
-        </>
-    );
+        <section>
+          <div className="">
+            {Categorias.map(({ id, img, titulo }) => (
+              <Card key={id} img={img} titulo={titulo} />
+            ))}
+          </div>
+        </section>
+      </main>
+    </>
+  );
 }
 
 export default App;
