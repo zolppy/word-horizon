@@ -30,7 +30,7 @@ const Categorias: CategoriaType[] = [
   {
     id: uuid(),
     img: kitchen,
-    titulo: "Conzinha",
+    titulo: "Cozinha",
   },
 
   {
