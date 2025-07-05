@@ -3,7 +3,7 @@ import type { Categoria as CategoriaType } from "../types/categoria";
 import animals from "../../assets/images/categories/animals.jpg";
 import school from "../../assets/images/categories/school.webp";
 import familly from "../../assets/images/categories/familly.jpg";
-import kitchen from "../../assets/images/categories/cook.png";
+import kitchen from "../../assets/images/categories/kitchen.png";
 import closets from "../../assets/images/categories/closets.jpg";
 import body from "../../assets/images/categories/body.jpg";
 import bedroom from "../../assets/images/categories/bedroom.webp";
