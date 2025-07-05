@@ -3,7 +3,7 @@ import type { Categoria as CategoriaType } from "../types/categoria";
 import animals from "../../assets/images/categories/animals.jpg";
 import school from "../../assets/images/categories/school.webp";
 import familly from "../../assets/images/categories/familly.jpg";
-import cook from "../../assets/images/categories/cook.png";
+import kitchen from "../../assets/images/categories/cook.png";
 import closets from "../../assets/images/categories/closets.jpg";
 import body from "../../assets/images/categories/body.jpg";
 import bedroom from "../../assets/images/categories/bedroom.webp";
@@ -13,48 +13,48 @@ const Categorias: CategoriaType[] = [
   {
     id: uuid(),
     img: animals,
-    titulo: "Animals",
+    titulo: "Animais",
   },
   {
     id: uuid(),
     img: school,
-    titulo: "School",
+    titulo: "Escola",
   },
 
   {
     id: uuid(),
     img: familly,
-    titulo: "Familly",
+    titulo: "Família",
   },
 
   {
     id: uuid(),
-    img: cook,
-    titulo: "Cook",
+    img: kitchen,
+    titulo: "Conzinha",
   },
 
   {
     id: uuid(),
     img: closets,
-    titulo: "Clothes",
+    titulo: "Roupas",
   },
 
   {
     id: uuid(),
     img: body,
-    titulo: "Body",
+    titulo: "Corpo",
   },
 
   {
     id: uuid(),
     img: bedroom,
-    titulo: "Bedrom",
+    titulo: "Quarto",
   },
 
   {
     id: uuid(),
     img: emotions,
-    titulo: "Emotions",
+    titulo: "Emoções",
   },
 ];
 
