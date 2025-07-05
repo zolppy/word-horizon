@@ -2,6 +2,7 @@ import { Header } from "./components/Header";
 import { Sidebar } from "./components/Sidebar";
 import { SidebarDesktop } from "./components/SidebarDesktop";
 import { Card } from "./components/Card";
+import { Footer } from "./components/Footer";
 import { Categorias } from "./utils/data/categorias";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }
