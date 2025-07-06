@@ -12,7 +12,7 @@ export function Btn({
   className,
   ...props
 }: Button) {
-  const baseStyles = "bg-transparent p-0";
+  const baseStyles = "p-0";
 
   return (
     <button
