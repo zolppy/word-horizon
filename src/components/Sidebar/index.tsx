@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import clsx from "clsx";
 import { CategoryList } from "../CategoryList";
@@ -13,8 +14,10 @@ import { FaBook } from "react-icons/fa6";
 import { FaPerson } from "react-icons/fa6";
 import { FaUserGroup } from "react-icons/fa6";
 import { FaBed } from "react-icons/fa6";
+import { FaSmile } from "react-icons/fa";
 
 export function Sidebar() {
+  const navigate = useNavigate();
   const { closeMenu, menuIsOpen } = useMenu();
   const { changeCategory, currentCategory } = useSidebar();
 
@@ -38,7 +41,7 @@ export function Sidebar() {
             <CategoryList>
               <CategoryItem
                 onClick={() => {
-                  changeCategory(Category.Home), closeMenu();
+                  changeCategory(Category.Home), navigate("/"), closeMenu();
                 }}
                 className={clsx(
                   currentCategory === Category.Home &&
@@ -49,7 +52,9 @@ export function Sidebar() {
               </CategoryItem>
               <CategoryItem
                 onClick={() => {
-                  changeCategory(Category.Animals), closeMenu();
+                  changeCategory(Category.Animals),
+                    navigate("/animals"),
+                    closeMenu();
                 }}
                 className={clsx(
                   currentCategory === Category.Animals &&
@@ -60,51 +65,9 @@ export function Sidebar() {
               </CategoryItem>
               <CategoryItem
                 onClick={() => {
-                  changeCategory(Category.Body), closeMenu();
-                }}
-                className={clsx(
-                  currentCategory === Category.Body &&
-                    "bg-white text-purple-700"
-                )}
-              >
-                <FaPerson /> Corpo
-              </CategoryItem>
-              <CategoryItem
-                onClick={() => {
-                  changeCategory(Category.Kitchen), closeMenu();
-                }}
-                className={clsx(
-                  currentCategory === Category.Kitchen &&
-                    "bg-white text-purple-700"
-                )}
-              >
-                <FaKitchenSet /> Cozinha
-              </CategoryItem>
-              <CategoryItem
-                onClick={() => {
-                  changeCategory(Category.School), closeMenu();
-                }}
-                className={clsx(
-                  currentCategory === Category.School &&
-                    "bg-white text-purple-700"
-                )}
-              >
-                <FaBook /> Escola
-              </CategoryItem>
-              <CategoryItem
-                onClick={() => {
-                  changeCategory(Category.Family), closeMenu();
-                }}
-                className={clsx(
-                  currentCategory === Category.Family &&
-                    "bg-white text-purple-700"
-                )}
-              >
-                <FaUserGroup /> Família
-              </CategoryItem>
-              <CategoryItem
-                onClick={() => {
-                  changeCategory(Category.Bedroom), closeMenu();
+                  changeCategory(Category.Bedroom),
+                    navigate("/bedroom"),
+                    closeMenu();
                 }}
                 className={clsx(
                   currentCategory === Category.Bedroom &&
@@ -115,7 +78,20 @@ export function Sidebar() {
               </CategoryItem>
               <CategoryItem
                 onClick={() => {
-                  changeCategory(Category.Clothes), closeMenu();
+                  changeCategory(Category.Body), navigate("/body"), closeMenu();
+                }}
+                className={clsx(
+                  currentCategory === Category.Body &&
+                    "bg-white text-purple-700"
+                )}
+              >
+                <FaPerson /> Corpo
+              </CategoryItem>
+              <CategoryItem
+                onClick={() => {
+                  changeCategory(Category.Clothes),
+                    navigate("/clothes"),
+                    closeMenu();
                 }}
                 className={clsx(
                   currentCategory === Category.Clothes &&
@@ -123,6 +99,58 @@ export function Sidebar() {
                 )}
               >
                 <FaShirt /> Roupas
+              </CategoryItem>
+              <CategoryItem
+                onClick={() => {
+                  changeCategory(Category.Emotions),
+                    navigate("/school"),
+                    closeMenu();
+                }}
+                className={clsx(
+                  currentCategory === Category.Emotions &&
+                    "bg-white text-purple-700"
+                )}
+              >
+                <FaSmile /> Emoções
+              </CategoryItem>
+              <CategoryItem
+                onClick={() => {
+                  changeCategory(Category.Family),
+                    navigate("/family"),
+                    closeMenu();
+                }}
+                className={clsx(
+                  currentCategory === Category.Family &&
+                    "bg-white text-purple-700"
+                )}
+              >
+                <FaUserGroup /> Família
+              </CategoryItem>
+              <CategoryItem
+                onClick={() => {
+                  changeCategory(Category.Kitchen),
+                    navigate("/kitchen"),
+                    closeMenu();
+                }}
+                className={clsx(
+                  currentCategory === Category.Kitchen &&
+                    "bg-white text-purple-700"
+                )}
+              >
+                <FaKitchenSet /> Cozinha
+              </CategoryItem>
+              <CategoryItem
+                onClick={() => {
+                  changeCategory(Category.School),
+                    navigate("/school"),
+                    closeMenu();
+                }}
+                className={clsx(
+                  currentCategory === Category.School &&
+                    "bg-white text-purple-700"
+                )}
+              >
+                <FaBook /> Escola
               </CategoryItem>
             </CategoryList>
           </motion.nav>
