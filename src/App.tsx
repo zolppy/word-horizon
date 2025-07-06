@@ -1,28 +1,44 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Animals from "./pages/Animals";
+import Bedroom from "./pages/Bedroom";
+import Body from "./pages/Body";
+import Clothes from "./pages/Clothes";
+import Emotions from "./pages/Emotions";
+import Family from "./pages/Family";
+import Kitchen from "./pages/Kitchen";
+import School from "./pages/School";
+import NotFound from "./pages/NotFound";
 import { Header } from "./components/Header";
 import { Sidebar } from "./components/Sidebar";
 import { SidebarDesktop } from "./components/SidebarDesktop";
-import { Card } from "./components/Card";
 import { Footer } from "./components/Footer";
-import { Categorias } from "./utils/data/categorias";
 
-function App() {
+export default function App() {
   return (
     <>
-      <Header />
-      <Sidebar />
-      <SidebarDesktop />
-      <main className="lg:ml-[300px] p-4 mt-20">
-        <section className="flex flex-col items-center justify-center">
-          <div className="grid grid-cols-1 items-center justify-center gap-8 w-[90%] md:grid-cols-2 md:w-[85%] lg:grid-cols-4 lg:w-[90%]">
-            {Categorias.map(({ id, img, titulo }) => (
-              <Card key={id} img={img} titulo={titulo} />
-            ))}
-          </div>
-        </section>
-      </main>
-      <Footer />
+      <Router>
+        <Header />
+        <Sidebar />
+        <SidebarDesktop />
+        <main className="lg:ml-[300px] p-4 mt-20">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/animals" element={<Animals />} />
+            <Route path="/bedroom" element={<Bedroom />} />
+            <Route path="/body" element={<Body />} />
+            <Route path="/clothes" element={<Clothes />} />
+            <Route path="/emotions" element={<Emotions />} />
+            <Route path="/family" element={<Family />} />
+            <Route path="/kitchen" element={<Kitchen />} />
+            <Route path="/school" element={<School />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+        <Footer />
+      </Router>
     </>
   );
 }
 
-export default App;
+App.displayName = "App";

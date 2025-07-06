@@ -17,44 +17,38 @@ const Categorias: CategoriaType[] = [
   },
   {
     id: uuid(),
-    img: school,
-    titulo: "Escola",
+    img: bedroom,
+    titulo: "Quarto",
   },
-
-  {
-    id: uuid(),
-    img: familly,
-    titulo: "Família",
-  },
-
-  {
-    id: uuid(),
-    img: kitchen,
-    titulo: "Cozinha",
-  },
-
-  {
-    id: uuid(),
-    img: closets,
-    titulo: "Roupas",
-  },
-
   {
     id: uuid(),
     img: body,
     titulo: "Corpo",
   },
-
   {
     id: uuid(),
-    img: bedroom,
-    titulo: "Quarto",
+    img: closets,
+    titulo: "Roupas",
   },
-
   {
     id: uuid(),
     img: emotions,
     titulo: "Emoções",
+  },
+  {
+    id: uuid(),
+    img: familly,
+    titulo: "Família",
+  },
+  {
+    id: uuid(),
+    img: kitchen,
+    titulo: "Cozinha",
+  },
+  {
+    id: uuid(),
+    img: school,
+    titulo: "Escola",
   },
 ];
 

@@ -4,6 +4,7 @@ enum Category {
   Bedroom = "bedroom",
   Body = "body",
   Clothes = "clothes",
+  Emotions = "emotions",
   Family = "family",
   Kitchen = "kitchen",
   School = "school",
