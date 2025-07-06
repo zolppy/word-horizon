@@ -20,7 +20,7 @@ export function CategoryList() {
   const navigate = useNavigate();
 
   return (
-    <ul className="mt-20 lg:mt-0 p-4 flex flex-col gap-y-2 text-white">
+    <ul className="mt-20 p-4 flex flex-col gap-y-2 text-white lg:mt-0 lg:absolute lg:-translate-y-1/2 lg:top-1/2 w-full">
       <CategoryItem
         onClick={() => {
           changeCategory(Category.Home), navigate("/"), closeMenu();
