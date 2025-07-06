@@ -2,7 +2,7 @@ import { FaCreativeCommons, FaGithub } from "react-icons/fa6";
 
 export function Footer() {
   return (
-    <footer className="text-center py-4 bg-black text-white p-2 flex justify-center">
+    <footer className="text-center py-4 bg-black text-white p-2 flex justify-center h-14">
       <div className="flex flex-col items-center justify-center w-fit lg:flex-row lg:gap-15 lg:ml-[300px]">
         <p className="flex gap-x-2 items-center">
           2025 <FaCreativeCommons />
