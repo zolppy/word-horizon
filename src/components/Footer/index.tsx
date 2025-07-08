@@ -16,6 +16,7 @@ export function Footer() {
             Desenvolvido por
             <a
               href="https://github.com/MegMinnie/"
+              target="_blank"
               className="text-purple-700 lg:hover:underline lg:hover:cursor-pointer"
             >
               Mirele Oliveira
@@ -23,6 +24,7 @@ export function Footer() {
             e
             <a
               href="https://github.com/zolppy"
+              target="_blank"
               className="text-purple-700 lg:hover:underline lg:hover:cursor-pointer"
             >
               Gabriel Oliveira
