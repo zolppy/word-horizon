@@ -6,7 +6,7 @@ export default function NotFound() {
 
   return (
     <section
-      style={{ height: "calc(100svh - 80px - 56px - 32px)" }}
+      style={{ height: "calc(100svh - 80px - 72px - 32px)" }}
       className="flex-1 p-8 flex items-center justify-center bg-white w-full"
     >
       <div className="text-center">

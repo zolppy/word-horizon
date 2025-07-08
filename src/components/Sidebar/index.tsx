@@ -1,9 +1,11 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { CategoryList } from "../CategoryList";
+import { Btn } from "../Btn";
 import { useMenu } from "../../contexts/MenuCtx";
+import { FaXmark } from "react-icons/fa6";
 
 export function Sidebar() {
-  const { menuIsOpen } = useMenu();
+  const { closeMenu, menuIsOpen } = useMenu();
 
   return (
     <AnimatePresence>
@@ -22,6 +24,12 @@ export function Sidebar() {
             transition={{ type: "spring", duration: 1 }}
             className="h-screen bg-purple-700 fixed z-10 top-0 overflow-x-hidden"
           >
+            <Btn
+              onClick={closeMenu}
+              className="text-2xl text-white absolute -translate-x-1/2 -translate-y-1/2 top-10 left-7"
+            >
+              <FaXmark />
+            </Btn>
             <CategoryList />
           </motion.nav>
         </>
