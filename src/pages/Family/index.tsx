@@ -1,8 +1,10 @@
+import { Section } from "../../components/Section";
+
 export default function Family() {
   return (
-    <section>
+    <Section>
       <h1>Family</h1>
-    </section>
+    </Section>
   );
 }
 

@@ -1,8 +1,10 @@
+import { Section } from "../../components/Section";
+
 export default function Kitchen() {
   return (
-    <section>
+    <Section>
       <h1>Kitchen</h1>
-    </section>
+    </Section>
   );
 }
 

@@ -1,9 +1,9 @@
 interface WordCard {
   id: string;
   nome: string;
+  traducao: string;
   img: string;
   som: string;
-  traducao: string;
 }
 
 export type { WordCard };

@@ -1,8 +1,10 @@
+import { Section } from "../../components/Section";
+
 export default function Clothes() {
   return (
-    <section>
+    <Section>
       <h1>Clothes</h1>
-    </section>
+    </Section>
   );
 }
 

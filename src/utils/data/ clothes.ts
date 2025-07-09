@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import type { WordCard as WordCardType } from "../types/WordCard";
+import type { WordCard as WordCardType } from "../types/wordCard";
 import animals from "../../assets/images/categories/animals.jpg";
 
 const Clothes: WordCardType[] = [

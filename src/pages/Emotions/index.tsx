@@ -1,8 +1,10 @@
+import { Section } from "../../components/Section";
+
 export default function Emotions() {
   return (
-    <section>
+    <Section>
       <h1>Emotions</h1>
-    </section>
+    </Section>
   );
 }
 

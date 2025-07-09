@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { Section } from "../../components/Section";
 import { useSidebar } from "../../contexts/SidebarCtx";
 import { Card } from "../../components/Card";
 import { Categorias } from "../../utils/data/categorias";
@@ -29,7 +30,7 @@ export default function Home() {
   ];
 
   return (
-    <section className="flex flex-col items-center justify-center">
+    <Section>
       <div className="grid grid-cols-1 items-center justify-center gap-8 w-[90%] md:grid-cols-2 md:w-[85%] lg:grid-cols-4 lg:w-[90%]">
         {Categorias.map(({ id, img, titulo }, index) => (
           <Card
@@ -42,7 +43,7 @@ export default function Home() {
           />
         ))}
       </div>
-    </section>
+    </Section>
   );
 }
 
