@@ -5,6 +5,9 @@ export default function NotFound() {
   const navigate = useNavigate();
 
   return (
+    /* header height: 80px */
+    /* footer height: 72px */
+    /* y main padding: 16px + 16px*/
     <section
       style={{ height: "calc(100svh - 80px - 72px - 32px)" }}
       className="flex-1 p-8 flex items-center justify-center bg-white w-full"
