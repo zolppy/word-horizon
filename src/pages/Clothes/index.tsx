@@ -1,10 +1,8 @@
-import { Section } from "../../components/Section";
-
 export default function Clothes() {
   return (
-    <Section>
+    <ul>
       <h1>Clothes</h1>
-    </Section>
+    </ul>
   );
 }
 

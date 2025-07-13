@@ -1,10 +1,8 @@
-import { Section } from "../../components/Section";
-
 export default function Animals() {
   return (
-    <Section>
+    <ul>
       <h1>Animals</h1>
-    </Section>
+    </ul>
   );
 }
 

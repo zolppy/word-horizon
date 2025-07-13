@@ -1,10 +1,8 @@
-import { Section } from "../../components/Section";
-
 export default function School() {
   return (
-    <Section>
+    <ul>
       <h1>School</h1>
-    </Section>
+    </ul>
   );
 }
 

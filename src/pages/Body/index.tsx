@@ -1,10 +1,8 @@
-import { Section } from "../../components/Section";
-
 export default function Body() {
   return (
-    <Section>
+    <ul>
       <h1>Body</h1>
-    </Section>
+    </ul>
   );
 }
 
