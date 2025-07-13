@@ -25,7 +25,7 @@ import foxImg from "../../assets/images/words/animals/fox.jpeg";
 import frogImg from "../../assets/images/words/animals/frog.jpeg";
 import goatImg from "../../assets/images/words/animals/goat.jpeg";
 import guineaPigImg from "../../assets/images/words/animals/guinea-pig.webp";
-import hummingbirdImg from "../../assets/images/words/animals/hummingbird.jpg";
+import hummingbirdImg from "../../assets/images/words/animals/hammingbird.jpg";
 import henImg from "../../assets/images/words/animals/hen.jpg";
 import horseImg from "../../assets/images/words/animals/horse.webp";
 import lionImg from "../../assets/images/words/animals/lion.jpg";

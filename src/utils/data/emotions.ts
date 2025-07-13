@@ -5,6 +5,7 @@ import animals from "../../assets/images/categories/animals.jpg";
 const Emotions: WordCardType[] = [
   {
     id: uuid(),
+
     nome: "cat",
     img: animals,
     som: "som1",
