@@ -13,15 +13,6 @@ export function WordCard({
     }
   }
 
-  /* width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.8s;
-  position: relative;
-  border: 4px solid #260466;
-  background-color: #260466;
-  border-radius: 10px; */
-
   return (
     <li className="w-[90%] h-[380px] perspective-1000 m-auto rounded-[5px]">
       <div className="w-full h-full transform preserve-3d">
