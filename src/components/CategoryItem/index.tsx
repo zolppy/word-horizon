@@ -11,7 +11,7 @@ export function CategoryItem({
   ...props
 }: CategoryItemProps) {
   const baseStyles =
-    "flex items-center text-2xl gap-x-4 whitespace-nowrap p-2 lg:hover:cursor-pointer lg:hover:bg-white lg:hover:text-purple-700 transition-colors duration-200";
+    "flex items-center text-2xl gap-x-4 whitespace-nowrap p-2 lg:hover:cursor-pointer lg:hover:bg-yellow-400 lg:hover:text-purple-700 transition-colors duration-200";
 
   return (
     <li {...props} className={twMerge(baseStyles, className as ClassNameValue)}>

@@ -20,13 +20,13 @@ export function CategoryList() {
   const navigate = useNavigate();
 
   return (
-    <ul className="mt-20 p-4 flex flex-col gap-y-2 text-white lg:mt-0 lg:absolute lg:-translate-y-1/2 lg:top-1/2 w-full">
+    <ul className="mt-20 pl-4 flex flex-col gap-y-2 text-white lg:mt-0 lg:absolute lg:-translate-y-1/2 lg:top-1/2 w-full">
       <CategoryItem
         onClick={() => {
           changeCategory(Category.Home), navigate("/"), closeMenu();
         }}
         className={clsx(
-          currentCategory === Category.Home && "bg-white text-purple-700"
+          currentCategory === Category.Home && "bg-yellow-400 text-purple-700"
         )}
       >
         <FaHouse /> Home
@@ -36,7 +36,8 @@ export function CategoryList() {
           changeCategory(Category.Animals), navigate("/animals"), closeMenu();
         }}
         className={clsx(
-          currentCategory === Category.Animals && "bg-white text-purple-700"
+          currentCategory === Category.Animals &&
+            "bg-yellow-400 text-purple-700"
         )}
       >
         <FaDog /> Animais
@@ -46,7 +47,8 @@ export function CategoryList() {
           changeCategory(Category.Bedroom), navigate("/bedroom"), closeMenu();
         }}
         className={clsx(
-          currentCategory === Category.Bedroom && "bg-white text-purple-700"
+          currentCategory === Category.Bedroom &&
+            "bg-yellow-400 text-purple-700"
         )}
       >
         <FaBed /> Quarto
@@ -56,7 +58,7 @@ export function CategoryList() {
           changeCategory(Category.Body), navigate("/body"), closeMenu();
         }}
         className={clsx(
-          currentCategory === Category.Body && "bg-white text-purple-700"
+          currentCategory === Category.Body && "bg-yellow-400 text-purple-700"
         )}
       >
         <FaPerson /> Corpo
@@ -66,7 +68,8 @@ export function CategoryList() {
           changeCategory(Category.Clothes), navigate("/clothes"), closeMenu();
         }}
         className={clsx(
-          currentCategory === Category.Clothes && "bg-white text-purple-700"
+          currentCategory === Category.Clothes &&
+            "bg-yellow-400 text-purple-700"
         )}
       >
         <FaShirt /> Roupas
@@ -76,7 +79,8 @@ export function CategoryList() {
           changeCategory(Category.Emotions), navigate("/school"), closeMenu();
         }}
         className={clsx(
-          currentCategory === Category.Emotions && "bg-white text-purple-700"
+          currentCategory === Category.Emotions &&
+            "bg-yellow-400 text-purple-700"
         )}
       >
         <FaSmile /> Emoções
@@ -86,7 +90,7 @@ export function CategoryList() {
           changeCategory(Category.Family), navigate("/family"), closeMenu();
         }}
         className={clsx(
-          currentCategory === Category.Family && "bg-white text-purple-700"
+          currentCategory === Category.Family && "bg-yellow-400 text-purple-700"
         )}
       >
         <FaUserGroup /> Família
@@ -96,7 +100,8 @@ export function CategoryList() {
           changeCategory(Category.Kitchen), navigate("/kitchen"), closeMenu();
         }}
         className={clsx(
-          currentCategory === Category.Kitchen && "bg-white text-purple-700"
+          currentCategory === Category.Kitchen &&
+            "bg-yellow-400 text-purple-700"
         )}
       >
         <FaKitchenSet /> Cozinha
@@ -106,7 +111,7 @@ export function CategoryList() {
           changeCategory(Category.School), navigate("/school"), closeMenu();
         }}
         className={clsx(
-          currentCategory === Category.School && "bg-white text-purple-700"
+          currentCategory === Category.School && "bg-yellow-400 text-purple-700"
         )}
       >
         <FaBook /> Escola

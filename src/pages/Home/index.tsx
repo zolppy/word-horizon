@@ -1,8 +1,7 @@
 export default function Home() {
   return (
     <>
-      <h1 className="uppercase font-extrabold text-4xl">Isto é um rascunho:</h1>
-      <div className="flex flex-col gap-y-8">
+      <div className="flex flex-col gap-y-4">
         <div>
           Projeto desenvolvido como Lorem ipsum dolor sit amet consectetur,
           adipisicing elit. Quisquam hic, sit corporis provident soluta quod. In
