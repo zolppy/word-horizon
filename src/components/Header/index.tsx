@@ -7,7 +7,7 @@ export function Header() {
   const { menuIsOpen, openMenu } = useMenu();
 
   return (
-    <header className="flex bg-black justify-center items-center p-4 h-20 fixed w-full top-0">
+    <header className="flex bg-black justify-center items-center p-4 h-20 fixed w-full top-0 z-10">
       {!menuIsOpen && (
         <Btn
           onClick={openMenu}

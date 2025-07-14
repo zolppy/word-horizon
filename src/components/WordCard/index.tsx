@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
 import { type WordCard as WordCardType } from "../../utils/types/wordCard";
 
 export function WordCard({
@@ -6,36 +8,49 @@ export function WordCard({
   img,
   som,
 }: Omit<WordCardType, "id">) {
-  function playSound() {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  function playSound(e: React.MouseEvent) {
+    e.stopPropagation();
     if (som) {
       const audio = new Audio(som);
       audio.play().catch((e) => console.error("Error playing sound:", e));
     }
   }
 
-  /* width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.8s;
-  position: relative;
-  border: 4px solid #260466;
-  background-color: #260466;
-  border-radius: 10px; */
-
   return (
-    <li className="w-[90%] h-[380px] perspective-1000 m-auto rounded-[5px]">
-      <div className="w-full h-full transform preserve-3d">
-        <div className="flip-card-front">
-          <p>{nome}</p>
-          <button onClick={playSound}>
-            <i></i>
+    <li
+      className="w-[200px] h-[300px] perspective-1000 cursor-pointer"
+      onClick={() => setIsFlipped(!isFlipped)}
+    >
+      <motion.div
+        className="w-full h-full relative preserve-3d"
+        animate={{ rotateY: isFlipped ? 180 : 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        {/* Front Card */}
+        <div className="front absolute w-full h-full bg-white border-2 border-purple-500 rounded-[10px] shadow-md grid place-items-center font-bold whitespace-nowrap backface-hidden overflow-hidden">
+          {nome}
+          <button
+            onClick={playSound}
+            className="sound-btn border-none cursor-pointer text-blue-500 absolute right-0 top-5 -translate-x-1/2 -translate-y-1/2 text-2xl hover:text-3xl z-10"
+          >
+            <i className="bi bi-volume-up-fill"></i>
           </button>
         </div>
-        <div className="flip-card-back">
-          <img className="w-full h-[350px]" src={img} alt="" />
-          <p>{traducao}</p>
+
+        {/* Back Card */}
+        <div className="back absolute w-full h-full bg-white border-2 border-purple-500 rounded-[10px] shadow-md flex flex-col backface-hidden overflow-hidden rotateY-180">
+          <img
+            src={img}
+            className="w-full h-[85%] object-cover rounded-t-[10px]"
+            alt={traducao}
+          />
+          <p className="font-bold text-center py-2 absolute bottom-0 left-0 right-0 bg-white">
+            {traducao}
+          </p>
         </div>
-      </div>
+      </motion.div>
     </li>
   );
 }
