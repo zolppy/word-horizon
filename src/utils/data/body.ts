@@ -8,7 +8,7 @@ import cheekImg from "../../assets/images/words/body/cheek.jpeg";
 import chestImg from "../../assets/images/words/body/chest.jpg";
 import chinImg from "../../assets/images/words/body/chin.jpg";
 import earImg from "../../assets/images/words/body/ear.jpg";
-import eyebrowImg from "../../assets/images/words/body/eyebrow.jpg";
+import eyebrowImg from "../../assets/images/words/body/eyebrow.jpeg";
 import eyeImg from "../../assets/images/words/body/eye.jpg";
 import fingerImg from "../../assets/images/words/body/finger.jpg";
 import fingernailImg from "../../assets/images/words/body/fingernail.jpg";

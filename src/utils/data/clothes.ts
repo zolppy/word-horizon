@@ -51,7 +51,7 @@ import suitSound from "../../assets/sounds/clothes/suit.mp3";
 import tieSound from "../../assets/sounds/clothes/tie.mp3";
 import tshirtSound from "../../assets/sounds/clothes/t-shirt.mp3";
 import underwearSound from "../../assets/sounds/clothes/underwear.mp3";
-import weddingRingSound from "../../assets/sounds/clothes/weddingRing.mp3";
+import weddingRingSound from "../../assets/sounds/clothes/wedding-ring.mp3";
 
 const clothes: WordCard[] = [
   {
