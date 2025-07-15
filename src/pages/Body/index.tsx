@@ -2,8 +2,11 @@ import { Section } from "../../components/Section";
 import { WordList } from "../../components/WordList";
 import { Word } from "../../components/Word";
 import { body } from "../../utils/data/body";
+import { useDocumentTitle } from "../../hooks/useDocumentTitle";
 
 export default function Body() {
+  useDocumentTitle("Word Horizon | Corpo");
+
   return (
     <Section>
       <WordList>

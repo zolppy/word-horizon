@@ -1,9 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { Section } from "../../components/Section";
 import { Btn } from "../../components/Btn";
+import { useDocumentTitle } from "../../hooks/useDocumentTitle";
 
 export default function NotFound() {
   const navigate = useNavigate();
+
+  useDocumentTitle("Word Horizon | Erro 404");
 
   return (
     <Section className="flex-1 p-8 flex items-center justify-center bg-white w-full text-center">

@@ -1,8 +1,11 @@
 import { WordList } from "../../components/WordList";
 import { Word } from "../../components/Word";
 import { school } from "../../utils/data/school";
+import { useDocumentTitle } from "../../hooks/useDocumentTitle";
 
 export default function School() {
+  useDocumentTitle("Word Horizon | Escola");
+
   return (
     <WordList>
       {school.map(({ id, nome, traducao, img, som }) => (

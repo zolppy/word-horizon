@@ -1,4 +1,8 @@
+import { useDocumentTitle } from "../../hooks/useDocumentTitle";
+
 export default function Home() {
+  useDocumentTitle("Word Horizon | Home");
+
   return (
     <>
       <div className="flex flex-col gap-y-4">
