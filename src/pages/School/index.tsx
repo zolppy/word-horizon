@@ -1,8 +1,14 @@
+import { WordList } from "../../components/WordList";
+import { Word } from "../../components/Word";
+import { school } from "../../utils/data/school";
+
 export default function School() {
   return (
-    <ul>
-      <h1>School</h1>
-    </ul>
+    <WordList>
+      {school.map(({ id, nome, traducao, img, som }) => (
+        <Word key={id} nome={nome} traducao={traducao} img={img} som={som} />
+      ))}
+    </WordList>
   );
 }
 
