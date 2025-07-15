@@ -1,118 +1,96 @@
 import { useNavigate } from "react-router-dom";
-import clsx from "clsx";
+import {
+  FaBed,
+  FaBook,
+  FaDog,
+  FaFaceSmile,
+  FaHouse,
+  FaKitchenSet,
+  FaPerson,
+  FaShirt,
+  FaUserGroup,
+} from "react-icons/fa6";
 import { CategoryItem } from "../CategoryItem";
-import { Category } from "../../utils/enums/category";
-import { FaHouse } from "react-icons/fa6";
-import { FaDog } from "react-icons/fa6";
-import { FaShirt } from "react-icons/fa6";
-import { FaKitchenSet } from "react-icons/fa6";
-import { FaSmile } from "react-icons/fa";
-import { FaBook } from "react-icons/fa6";
-import { FaPerson } from "react-icons/fa6";
-import { FaUserGroup } from "react-icons/fa6";
-import { FaBed } from "react-icons/fa6";
-import { useSidebar } from "../../contexts/SidebarCtx";
 import { useMenu } from "../../contexts/MenuCtx";
+import { Category } from "../../utils/enums/category";
+import { usePathname } from "../../hooks/usePathname";
 
 export function CategoryList() {
   const { closeMenu } = useMenu();
-  const { currentCategory, changeCategory } = useSidebar();
   const navigate = useNavigate();
+  const { pathname } = usePathname(window.location.pathname);
 
   return (
     <ul className="mt-20 pl-4 flex flex-col gap-y-2 text-white lg:mt-0 lg:absolute lg:-translate-y-1/2 lg:top-1/2 w-full">
       <CategoryItem
         onClick={() => {
-          changeCategory(Category.Home), navigate("/"), closeMenu();
+          navigate("/"), closeMenu();
         }}
-        className={clsx(
-          currentCategory === Category.Home && "bg-yellow-400 text-purple-700"
-        )}
+        variant={pathname === "/" ? "selected" : "default"}
       >
         <FaHouse /> Home
       </CategoryItem>
       <CategoryItem
         onClick={() => {
-          changeCategory(Category.Animals), navigate("/animals"), closeMenu();
+          navigate("/animals"), closeMenu();
         }}
-        className={clsx(
-          currentCategory === Category.Animals &&
-            "bg-yellow-400 text-purple-700"
-        )}
+        variant={pathname === `/${Category.Animals}` ? "selected" : "default"}
       >
         <FaDog /> Animais
       </CategoryItem>
       <CategoryItem
         onClick={() => {
-          changeCategory(Category.Bedroom), navigate("/bedroom"), closeMenu();
+          navigate("/bedroom"), closeMenu();
         }}
-        className={clsx(
-          currentCategory === Category.Bedroom &&
-            "bg-yellow-400 text-purple-700"
-        )}
+        variant={pathname === `/${Category.Bedroom}` ? "selected" : "default"}
       >
         <FaBed /> Quarto
       </CategoryItem>
       <CategoryItem
         onClick={() => {
-          changeCategory(Category.Body), navigate("/body"), closeMenu();
+          navigate("/body"), closeMenu();
         }}
-        className={clsx(
-          currentCategory === Category.Body && "bg-yellow-400 text-purple-700"
-        )}
+        variant={pathname === `/${Category.Body}` ? "selected" : "default"}
       >
         <FaPerson /> Corpo
       </CategoryItem>
       <CategoryItem
         onClick={() => {
-          changeCategory(Category.Clothes), navigate("/clothes"), closeMenu();
+          navigate("/clothes"), closeMenu();
         }}
-        className={clsx(
-          currentCategory === Category.Clothes &&
-            "bg-yellow-400 text-purple-700"
-        )}
+        variant={pathname === `/${Category.Clothes}` ? "selected" : "default"}
       >
         <FaShirt /> Roupas
       </CategoryItem>
       <CategoryItem
         onClick={() => {
-          changeCategory(Category.Emotions), navigate("/emotions"), closeMenu();
+          navigate("/emotions"), closeMenu();
         }}
-        className={clsx(
-          currentCategory === Category.Emotions &&
-            "bg-yellow-400 text-purple-700"
-        )}
+        variant={pathname === `/${Category.Emotions}` ? "selected" : "default"}
       >
-        <FaSmile /> Emoções
+        <FaFaceSmile /> Emoções
       </CategoryItem>
       <CategoryItem
         onClick={() => {
-          changeCategory(Category.Family), navigate("/family"), closeMenu();
+          navigate("/family"), closeMenu();
         }}
-        className={clsx(
-          currentCategory === Category.Family && "bg-yellow-400 text-purple-700"
-        )}
+        variant={pathname === `/${Category.Family}` ? "selected" : "default"}
       >
         <FaUserGroup /> Família
       </CategoryItem>
       <CategoryItem
         onClick={() => {
-          changeCategory(Category.Kitchen), navigate("/kitchen"), closeMenu();
+          navigate("/kitchen"), closeMenu();
         }}
-        className={clsx(
-          currentCategory === Category.Kitchen &&
-            "bg-yellow-400 text-purple-700"
-        )}
+        variant={pathname === `/${Category.Kitchen}` ? "selected" : "default"}
       >
         <FaKitchenSet /> Cozinha
       </CategoryItem>
       <CategoryItem
         onClick={() => {
-          changeCategory(Category.School), navigate("/school"), closeMenu();
+          navigate("/school"), closeMenu();
         }}
-        className={clsx(
-          currentCategory === Category.School && "bg-yellow-400 text-purple-700"
-        )}
+        variant={pathname === `/${Category.School}` ? "selected" : "default"}
       >
         <FaBook /> Escola
       </CategoryItem>
