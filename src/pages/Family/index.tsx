@@ -1,8 +1,14 @@
+import { WordList } from "../../components/WordList";
+import { Word } from "../../components/Word";
+import { family } from "../../utils/data/family";
+
 export default function Family() {
   return (
-    <ul>
-      <h1>Family</h1>
-    </ul>
+    <WordList>
+      {family.map(({ id, nome, traducao, img, som }) => (
+        <Word key={id} nome={nome} traducao={traducao} img={img} som={som} />
+      ))}
+    </WordList>
   );
 }
 
