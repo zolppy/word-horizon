@@ -76,7 +76,7 @@ export function CategoryList() {
       </CategoryItem>
       <CategoryItem
         onClick={() => {
-          changeCategory(Category.Emotions), navigate("/school"), closeMenu();
+          changeCategory(Category.Emotions), navigate("/emotions"), closeMenu();
         }}
         className={clsx(
           currentCategory === Category.Emotions &&

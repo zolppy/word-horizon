@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import { type WordCard } from "../types/wordCard";
+import { type Word } from "../types/word";
 
 // Import images
 import alligatorImg from "../../assets/images/words/animals/alligator.webp";
@@ -89,7 +89,7 @@ import turtleSound from "../../assets/sounds/animals/turtle.mp3";
 import whaleSound from "../../assets/sounds/animals/whale.mp3";
 import wolfSound from "../../assets/sounds/animals/wolf.mp3";
 
-const animals: WordCard[] = [
+const animals: Word[] = [
   {
     id: uuid(),
     nome: "Ant",

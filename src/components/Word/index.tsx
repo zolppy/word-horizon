@@ -1,13 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { type WordCard as WordCardType } from "../../utils/types/wordCard";
+import { type Word as WordType } from "../../utils/types/word";
 
-export function WordCard({
-  nome,
-  traducao,
-  img,
-  som,
-}: Omit<WordCardType, "id">) {
+export function Word({ nome, traducao, img, som }: Omit<WordType, "id">) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   function playSound(e: React.MouseEvent) {
@@ -38,7 +33,6 @@ export function WordCard({
             <i className="bi bi-volume-up-fill"></i>
           </button>
         </div>
-
         {/* Back Card */}
         <div className="back absolute w-full h-full bg-white border-2 border-purple-500 rounded-[10px] shadow-md flex flex-col backface-hidden overflow-hidden rotateY-180">
           <img
@@ -55,4 +49,4 @@ export function WordCard({
   );
 }
 
-WordCard.displayName = "WordCard";
+Word.displayName = "Word";

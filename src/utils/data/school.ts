@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import type { WordCard as WordCardType } from "../types/wordCard";
+import type { Word } from "../types/word";
 import agenda from "../../assets/images/words/school/agenda.jpeg";
 import artPaints from "../../assets/images/words/school/art-paints.jpeg";
 import backpack from "../../assets/images/words/school/backpack.jpg";
@@ -23,7 +23,7 @@ import scissors from "../../assets/images/words/school/scissors.webp";
 import sharpener from "../../assets/images/words/school/sharpener.webp";
 import uniform from "../../assets/images/words/school/uniform.jpg";
 
-const School: WordCardType[] = [
+const School: Word[] = [
   {
     id: uuid(),
     nome: "agenda",

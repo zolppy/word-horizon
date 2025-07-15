@@ -1,21 +1,16 @@
 import { Section } from "../../components/Section";
+import { WordList } from "../../components/WordList";
+import { Word } from "../../components/Word";
 import { bedroom } from "../../utils/data/bedroom";
-import { WordCard } from "../../components/WordCard";
 
 export default function Bedroom() {
   return (
     <Section>
-      <ul className="flex flex-col  items-center justify-center w-full">
+      <WordList>
         {bedroom.map(({ id, nome, traducao, img, som }) => (
-          <WordCard
-            key={id}
-            nome={nome}
-            traducao={traducao}
-            img={img}
-            som={som}
-          />
+          <Word key={id} nome={nome} traducao={traducao} img={img} som={som} />
         ))}
-      </ul>
+      </WordList>
     </Section>
   );
 }

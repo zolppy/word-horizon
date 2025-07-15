@@ -1,21 +1,16 @@
 import { Section } from "../../components/Section";
+import { WordList } from "../../components/WordList";
+import { Word } from "../../components/Word";
 import { clothes } from "../../utils/data/clothes";
-import { WordCard } from "../../components/WordCard";
 
 export default function Clothes() {
   return (
     <Section>
-      <ul className="flex flex-col  items-center justify-center w-full">
+      <WordList>
         {clothes.map(({ id, nome, traducao, img, som }) => (
-          <WordCard
-            key={id}
-            nome={nome}
-            traducao={traducao}
-            img={img}
-            som={som}
-          />
+          <Word key={id} nome={nome} traducao={traducao} img={img} som={som} />
         ))}
-      </ul>
+      </WordList>
     </Section>
   );
 }

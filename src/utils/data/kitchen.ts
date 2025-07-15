@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import type { WordCard as WordCardType } from "../types/wordCard";
+import type { Word } from "../types/word";
 import blender from "../../assets/images/words/kitchen/blender.webp";
 import bowl from "../../assets/images/words/kitchen/bowl.webp";
 import can from "../../assets/images/words/kitchen/can.jpeg";
@@ -25,7 +25,7 @@ import tablecloth from "../../assets/images/words/kitchen/tablecloth.jpg";
 import tinFoll from "../../assets/images/words/kitchen/tin-foll.jpg";
 import toaster from "../../assets/images/words/kitchen/toaster.jpg";
 
-const Kitchen: WordCardType[] = [
+const Kitchen: Word[] = [
   {
     id: uuid(),
     nome: "blender",

@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import type { WordCard as WordCardType } from "../types/wordCard";
+import type { Word } from "../types/word";
 import aunt from "../../assets/images/words/family/aunt.jpg";
 import brotherInLaw from "../../assets/images/words/family/brother-in-law.avif";
 import brother from "../../assets/images/words/family/brother.jpeg";
@@ -26,7 +26,7 @@ import son from "../../assets/images/words/family/son.jpg";
 import uncle from "../../assets/images/words/family/uncle.avif";
 import wife from "../../assets/images/words/family/wife.jpeg";
 
-const Family: WordCardType[] = [
+const Family: Word[] = [
   { id: uuid(), nome: "aunt", img: aunt, som: "auntSound", traducao: "tia" },
   {
     id: uuid(),

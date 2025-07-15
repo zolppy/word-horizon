@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import { type WordCard } from "../types/wordCard";
+import { type Word } from "../types/word";
 
 // Import images
 import armImg from "../../assets/images/words/body/arm.avif";
@@ -59,7 +59,7 @@ import toothSound from "../../assets/sounds/body/tooth.mp3";
 import vaginaSound from "../../assets/sounds/body/vagina.mp3";
 import waistSound from "../../assets/sounds/body/waist.mp3";
 
-const body: WordCard[] = [
+const body: Word[] = [
   {
     id: uuid(),
     nome: "Arm",

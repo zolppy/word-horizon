@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import { type WordCard } from "../types/wordCard";
+import { type Word } from "../types/word";
 
 // Import images
 import beltImg from "../../assets/images/words/clothes/belt.jpg";
@@ -53,7 +53,7 @@ import tshirtSound from "../../assets/sounds/clothes/t-shirt.mp3";
 import underwearSound from "../../assets/sounds/clothes/underwear.mp3";
 import weddingRingSound from "../../assets/sounds/clothes/wedding-ring.mp3";
 
-const clothes: WordCard[] = [
+const clothes: Word[] = [
   {
     id: uuid(),
     nome: "Belt",

@@ -1,21 +1,16 @@
 import { Section } from "../../components/Section";
+import { WordList } from "../../components/WordList";
+import { Word } from "../../components/Word";
 import { animals } from "../../utils/data/animals";
-import { WordCard } from "../../components/WordCard";
 
 export default function Animals() {
   return (
     <Section className="w-full">
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
+      <WordList>
         {animals.map(({ id, nome, traducao, img, som }) => (
-          <WordCard
-            key={id}
-            nome={nome}
-            traducao={traducao}
-            img={img}
-            som={som}
-          />
+          <Word key={id} nome={nome} traducao={traducao} img={img} som={som} />
         ))}
-      </ul>
+      </WordList>
     </Section>
   );
 }

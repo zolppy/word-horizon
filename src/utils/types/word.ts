@@ -1,4 +1,4 @@
-interface WordCard {
+interface Word {
   id: string;
   nome: string;
   traducao: string;
@@ -6,4 +6,4 @@ interface WordCard {
   som: string;
 }
 
-export type { WordCard };
+export type { Word };

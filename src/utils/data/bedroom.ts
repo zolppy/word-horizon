@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import { type WordCard } from "../types/wordCard";
+import { type Word } from "../types/word";
 
 // Import images
 import lampImg from "../../assets/images/words/bedroom/lamp.webp";
@@ -41,7 +41,7 @@ import pajamasSound from "../../assets/sounds/bedroom/pajamas.mp3";
 import shoeRackSound from "../../assets/sounds/bedroom/shoe-rack.mp3";
 import pillowSound from "../../assets/sounds/bedroom/pillow.mp3";
 
-const bedroom: WordCard[] = [
+const bedroom: Word[] = [
   {
     id: uuid(),
     nome: "Lamp",
