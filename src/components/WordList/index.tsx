@@ -6,7 +6,7 @@ interface WordListProps {
 
 export function WordList({ children }: WordListProps) {
   return (
-    <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
+    <ul className="gap-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
       {children}
     </ul>
   );

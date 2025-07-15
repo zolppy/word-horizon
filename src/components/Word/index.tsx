@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { FaVolumeHigh } from "react-icons/fa6";
 import { type Word as WordType } from "../../utils/types/word";
 
 export function Word({ nome, traducao, img, som }: Omit<WordType, "id">) {
@@ -15,8 +16,8 @@ export function Word({ nome, traducao, img, som }: Omit<WordType, "id">) {
 
   return (
     <li
-      className="w-[200px] h-[300px] perspective-1000 cursor-pointer"
       onClick={() => setIsFlipped(!isFlipped)}
+      className="min-w-[320px] w-full max-w-[480px] h-[300px] perspective-1000 lg:hover:cursor-pointer lg:min-w-[220px]"
     >
       <motion.div
         className="w-full h-full relative preserve-3d"
@@ -30,7 +31,7 @@ export function Word({ nome, traducao, img, som }: Omit<WordType, "id">) {
             onClick={playSound}
             className="sound-btn border-none cursor-pointer text-blue-500 absolute right-0 top-5 -translate-x-1/2 -translate-y-1/2 text-2xl hover:text-3xl z-10"
           >
-            <i className="bi bi-volume-up-fill"></i>
+            <FaVolumeHigh />
           </button>
         </div>
         {/* Back Card */}
