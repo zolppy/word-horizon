@@ -28,11 +28,13 @@ After configuring Docker, clone this repository:
 git clone git@github.com:zolppy/word-horizon.git
 ```
 
-Navigate to the project operations directory and then start Docker containers with:
+Navigate to the project directory and then start Docker containers with:
 
 ```shell
 docker compose up --build
 ```
+
+Now you can access the application throught the given URL in the terminal, like `http://172.19.0.2:80/` or `http://localhost:80/`.
 
 ## Lint
 
