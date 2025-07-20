@@ -1,0 +1,8 @@
+services:
+  word-horizon:
+    container_name: word-horizon
+    image: node:24-alpine
+    working_dir: /app
+    command: /bin/sh -c "npm install && npm run dev -- --host --port 80"
+    volumes:
+      - .:/app
