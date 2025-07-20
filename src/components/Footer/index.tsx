@@ -21,13 +21,21 @@ export function Footer() {
             >
               Mirele Oliveira
             </a>
-            e
+            ,
             <a
               href="https://github.com/zolppy"
               target="_blank"
               className="text-purple-700 lg:hover:underline lg:hover:cursor-pointer"
             >
               Gabriel Oliveira
+            </a>
+            e
+            <a
+              href="https://github.com/zolppy"
+              target="_blank"
+              className="text-purple-700 lg:hover:underline lg:hover:cursor-pointer"
+            >
+              Rulian Cruz
             </a>
           </div>
         </div>

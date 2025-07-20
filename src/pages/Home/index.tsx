@@ -10,7 +10,7 @@ export default function Home() {
     <section className="flex flex-col gap-y-2">
       <div className="flex flex-col gap-y-4">
         <h1 className="font-bold  text-3xl text-[#431861]">Sobre o projeto</h1>
-        <div className="text-justify indent-[2em]">
+        <div className="text-justify flex flex-col gap-2">
           <p>
             Word Horizon é um projeto de flashcards interativos com as palavras
             mais comuns e úteis da língua inglesa, organizadas por categorias
@@ -26,21 +26,7 @@ export default function Home() {
             tem acesso à sua tradução. Esse recurso estimula múltiplas formas de
             aprendizagem, como auditiva e visual.
           </p>
-        </div>
-        <h2 className="font-bold">Competências da BNCC trabalhadas:</h2>
-        <ul className="text-justify list-disc pl-5 italic">
-          <li>
-            (EF06LI04) Reconhecer, com o apoio de palavras cognatas e pistas do
-            contexto discursivo, o assunto e as informações principais em textos
-            orais sobre temas familiares;
-          </li>
-          <li>(EF06LI09) Localizar informações específicas em texto;</li>
-          <li>
-            (EF06LI11) Explorar ambientes virtuais e/ou aplicativos para
-            construir repertório lexical na língua inglesa.
-          </li>
-        </ul>
-        <div className="text-justify indent-[2em]">
+
           <p>
             Diversos estudos destacam a eficácia dos flashcards como estratégia
             para aquisição de vocabulário em novos idiomas. O uso desse recurso
@@ -63,20 +49,21 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <ul className="bg-[#7800ca] w-full">
-        <h2 className="text-white font-bold text-center text-2xl p-2">
-          Desenvolvedores
-        </h2>
-        {autores.map(({ id, img, nome, descricao, link }) => (
-          <CardAutores
-            key={id}
-            img={img}
-            nome={nome}
-            descricao={descricao}
-            link={link}
-          />
-        ))}
-      </ul>
+      <div className=" mt-4 w-full">
+        <h2 className="font-bold text-center text-2xl p-2">Desenvolvedores</h2>
+
+        <ul className="w-full grid md:grid-cols-2 text-center itens-center m-auto lg:grid-cols-3">
+          {autores.map(({ id, img, nome, descricao, link }) => (
+            <CardAutores
+              key={id}
+              img={img}
+              nome={nome}
+              descricao={descricao}
+              link={link}
+            />
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }
