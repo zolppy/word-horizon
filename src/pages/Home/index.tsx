@@ -6,8 +6,9 @@ export default function Home() {
   useDocumentTitle("Word Horizon | Home");
 
   return (
-    <>
-      <div className="flex flex-col gap-y-4 w-full">
+    // Se quiser ajustar o espaçamento da parte roxa, mude gap-y-2
+    <section className="flex flex-col gap-y-2">
+      <div className="flex flex-col gap-y-4">
         <h1 className="font-bold  text-3xl text-[#431861]">Sobre o projeto</h1>
         <div className="text-justify indent-[2em]">
           <p>
@@ -61,24 +62,22 @@ export default function Home() {
             disciplina Software Educacional.
           </p>
         </div>
-        <section>
-          <ul className="bg-[#7800ca] mt-4 w-full">
-            <h2 className="text-white font-bold text-center text-2xl p-2">
-              Desenvolvedores
-            </h2>
-            {autores.map(({ id, img, nome, descricao, link }) => (
-              <CardAutores
-                key={id}
-                img={img}
-                nome={nome}
-                descricao={descricao}
-                link={link}
-              />
-            ))}
-          </ul>
-        </section>
       </div>
-    </>
+      <ul className="bg-[#7800ca] w-full">
+        <h2 className="text-white font-bold text-center text-2xl p-2">
+          Desenvolvedores
+        </h2>
+        {autores.map(({ id, img, nome, descricao, link }) => (
+          <CardAutores
+            key={id}
+            img={img}
+            nome={nome}
+            descricao={descricao}
+            link={link}
+          />
+        ))}
+      </ul>
+    </section>
   );
 }
 
