@@ -1,69 +1,82 @@
 import { useDocumentTitle } from "../../hooks/useDocumentTitle";
+import { CardAutores } from "../../components/CardAutores";
+import { autores } from "../../utils/data/autores";
 
 export default function Home() {
   useDocumentTitle("Word Horizon | Home");
 
   return (
     <>
-      <div className="flex flex-col gap-y-4">
-        <div>
-          Projeto desenvolvido como Lorem ipsum dolor sit amet consectetur,
-          adipisicing elit. Quisquam hic, sit corporis provident soluta quod. In
-          possimus adipisci incidunt accusantium doloremque vero! Quas porro
-          nesciunt maiores minima, placeat nobis debitis.
+      <div className="flex flex-col gap-y-4 w-full">
+        <h1 className="font-bold  text-3xl text-[#431861]">Sobre o projeto</h1>
+        <div className="text-justify indent-[2em]">
+          <p>
+            Word Horizon é um projeto de flashcards interativos com as palavras
+            mais comuns e úteis da língua inglesa, organizadas por categorias
+            temáticas: animais, quarto, corpo, roupas, emoções, família, cozinha
+            e escola. O objetivo principal é auxiliar na aprendizagem e
+            memorização do vocabulário, especialmente no contexto do ensino
+            infantil, embora também possa ser empregado no ensino fundamental.
+          </p>
+          <p>
+            A aplicação integra som, imagem e texto para promovendo um
+            aprendizado mais completo e lúdico. Ao clicar na palavra, o usuário
+            ouve sua pronúncia em inglês, visualiza a imagem correspondente e
+            tem acesso à sua tradução. Esse recurso estimula múltiplas formas de
+            aprendizagem, como auditiva e visual.
+          </p>
         </div>
-        <div>
-          Vários estudos comprovam a eficácia de <strong>flashcards</strong>{" "}
-          para o aprendizado. Essa estratégia/método de estudo é especialmente
-          eficaz no contexto de aquisição de vocabulário de um idioma Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Quod laudantium
-          saepe ipsam cupiditate molestiae unde sapiente laborum dolorum
-          similique! Ducimus rerum ullam eius sit animi labore nihil nulla
-          quibusdam atque.
+        <h2 className="font-bold">Competências da BNCC trabalhadas:</h2>
+        <ul className="text-justify list-disc pl-5 italic">
+          <li>
+            (EF06LI04) Reconhecer, com o apoio de palavras cognatas e pistas do
+            contexto discursivo, o assunto e as informações principais em textos
+            orais sobre temas familiares;
+          </li>
+          <li>(EF06LI09) Localizar informações específicas em texto;</li>
+          <li>
+            (EF06LI11) Explorar ambientes virtuais e/ou aplicativos para
+            construir repertório lexical na língua inglesa.
+          </li>
+        </ul>
+        <div className="text-justify indent-[2em]">
+          <p>
+            Diversos estudos destacam a eficácia dos flashcards como estratégia
+            para aquisição de vocabulário em novos idiomas. O uso desse recurso
+            potencializa a aprendizagem ativa, promove a autonomia dos
+            estudantes e oferece uma representação visual do conteúdo, o que
+            favorece a fixação e a compreensão das palavras em diferentes
+            contextos.
+          </p>
+          <p>
+            Tendo em vista a importância de um vocabulário amplo para o domínio
+            de uma nova língua, o Word Horizon oferece um conjunto de 999
+            vocábulos em inglês, cuidadosamente selecionados para impulsionar o
+            aprendizado do idioma de forma lúdica e eficiente.
+          </p>
+          <p>
+            Por fim, a aplicação foi desenvolvida pelos estudantes do curso de
+            Licenciatura em Computação do Instituito Federal de Educação e
+            Tecnologia (IFBA) – Campus Jacobina, como parte das atividades da
+            disciplina Software Educacional.
+          </p>
         </div>
-        <div>
-          Tendo em mente o quão importante é ter um amplo vocabulário no idioma
-          que se quer aprender, esta aplicação conta com 999 vocábulos da língua
-          inglesa para impulsionar seu conhecimento do idioma Lorem ipsum dolor
-          sit amet consectetur adipisicing elit. Obcaecati aspernatur explicabo
-          sequi quod quis modi magni veniam molestias quo reprehenderit a
-          perspiciatis hic officia maiores, totam quidem eveniet commodi.
-          Dolores.
-        </div>
-        <div>
-          Esta aplicação foi desenvolvida como requisito parcial de conclusão da
-          disciplina de <strong>Software educacional</strong> Lorem ipsum dolor
-          sit amet consectetur adipisicing elit. Nemo sint magnam dicta et,
-          reprehenderit veritatis iusto qui optio nisi neque laborum tenetur
-          possimus temporibus inventore? Vitae quos quisquam pariatur quod.
-        </div>
-        <div>Autores:</div>
-        <div>
-          <div>
-            <div>
-              Gabriel Cavalcante de Jesus Oliveira{" "}
-              <strong>
-                <a href="">GitHub</a>
-              </strong>
-            </div>
-          </div>
-          <div>
-            <div>
-              Mirele Oliveira da Silva{" "}
-              <strong>
-                <a href="">GitHub</a>
-              </strong>
-            </div>
-          </div>
-          <div>
-            <div>
-              Rulian de Jesus Cruz{" "}
-              <strong>
-                <a href="">GitHub</a>
-              </strong>
-            </div>
-          </div>
-        </div>
+        <section>
+          <ul className="bg-[#7800ca] mt-4 w-full">
+            <h2 className="text-white font-bold text-center text-2xl p-2">
+              Desenvolvedores
+            </h2>
+            {autores.map(({ id, img, nome, descricao, link }) => (
+              <CardAutores
+                key={id}
+                img={img}
+                nome={nome}
+                descricao={descricao}
+                link={link}
+              />
+            ))}
+          </ul>
+        </section>
       </div>
     </>
   );
