@@ -1,15 +1,15 @@
 import { useDocumentTitle } from "../../hooks/useDocumentTitle";
 import { CardAutores } from "../../components/CardAutores";
 import { autores } from "../../utils/data/autores";
+import H2 from "../../components/H2";
 
 export default function Home() {
   useDocumentTitle("Word Horizon | Home");
 
   return (
-    // Se quiser ajustar o espaçamento da parte roxa, mude gap-y-2
-    <section className="flex flex-col gap-y-2">
+    <div className="flex flex-col gap-y-2">
       <div className="flex flex-col gap-y-4">
-        <h1 className="font-bold  text-3xl text-[#431861]">Sobre o projeto</h1>
+        <H2>Sobre o projeto</H2>
         <div className="text-justify flex flex-col gap-2">
           <p>
             Word Horizon é um projeto de flashcards interativos com as palavras
@@ -26,7 +26,6 @@ export default function Home() {
             tem acesso à sua tradução. Esse recurso estimula múltiplas formas de
             aprendizagem, como auditiva e visual.
           </p>
-
           <p>
             Diversos estudos destacam a eficácia dos flashcards como estratégia
             para aquisição de vocabulário em novos idiomas. O uso desse recurso
@@ -49,9 +48,8 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className=" mt-4 w-full">
-        <h2 className="font-bold text-center text-2xl p-2">Desenvolvedores</h2>
-
+      <div className="mt-4 w-full flex flex-col gap-y-4">
+        <H2>Desenvolvedores</H2>
         <ul className="w-full grid md:grid-cols-2 text-center itens-center m-auto lg:grid-cols-3">
           {autores.map(({ id, img, nome, descricao, link }) => (
             <CardAutores
@@ -64,7 +62,7 @@ export default function Home() {
           ))}
         </ul>
       </div>
-    </section>
+    </div>
   );
 }
 
