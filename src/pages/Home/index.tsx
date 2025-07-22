@@ -2,9 +2,29 @@ import { useDocumentTitle } from "../../hooks/useDocumentTitle";
 import { CardAutores } from "../../components/CardAutores";
 import { autores } from "../../utils/data/autores";
 import H2 from "../../components/H2";
+import { countAllItems } from "../../utils/helpers/countAllItems";
+import { animals } from "../../utils/data/animals";
+import { bedroom } from "../../utils/data/bedroom";
+import { body } from "../../utils/data/body";
+import { clothes } from "../../utils/data/clothes";
+import { emotions } from "../../utils/data/emotions";
+import { family } from "../../utils/data/family";
+import { kitchen } from "../../utils/data/kitchen";
+import { school } from "../../utils/data/school";
 
 export default function Home() {
   useDocumentTitle("Word Horizon | Home");
+  const categories = [
+    animals,
+    bedroom,
+    body,
+    clothes,
+    emotions,
+    family,
+    kitchen,
+    school,
+  ];
+  const totalWords = countAllItems(...categories);
 
   return (
     <div className="flex flex-col gap-y-2">
@@ -36,9 +56,10 @@ export default function Home() {
           </p>
           <p>
             Tendo em vista a importância de um vocabulário amplo para o domínio
-            de uma nova língua, o Word Horizon oferece um conjunto de 999
-            vocábulos em inglês, cuidadosamente selecionados para impulsionar o
-            aprendizado do idioma de forma lúdica e eficiente.
+            de uma nova língua, o Word Horizon oferece um conjunto de{" "}
+            <strong>{totalWords} vocábulos em inglês</strong>, cuidadosamente
+            selecionados para impulsionar o aprendizado do idioma de forma
+            lúdica e eficiente.
           </p>
           <p>
             Por fim, a aplicação foi desenvolvida pelos estudantes do curso de
