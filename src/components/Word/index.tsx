@@ -18,6 +18,14 @@ export function Word({ nome, traducao, img, som }: Omit<WordType, "id">) {
     <li
       onClick={() => setIsFlipped(!isFlipped)}
       className="min-w-[320px] w-full max-w-[480px] h-[300px] perspective-1000 lg:hover:cursor-pointer lg:min-w-[220px]"
+      style={{
+        boxShadow: `
+          rgba(168, 85, 247, 0.09) 0px 2px 1px,
+          rgba(168, 85, 247, 0.09) 0px 4px 2px,
+          rgba(168, 85, 247, 0.09) 0px 8px 4px,
+          rgba(168, 85, 247, 0.09) 0px 16px 8px,
+          rgba(168, 85, 247, 0.09) 0px 32px 16px`,
+      }}
     >
       <motion.div
         className="w-full h-full relative preserve-3d"
@@ -25,7 +33,7 @@ export function Word({ nome, traducao, img, som }: Omit<WordType, "id">) {
         transition={{ duration: 0.5 }}
       >
         {/* Front Card */}
-        <div className="front absolute w-full h-full bg-white border-2 border-purple-500 rounded-[10px] shadow-md grid place-items-center font-bold whitespace-nowrap backface-hidden overflow-hidden">
+        <div className="front absolute w-full h-full bg-white  rounded-[10px] shadow-md grid place-items-center font-bold whitespace-nowrap backface-hidden overflow-hidden">
           {nome}
           <button
             onClick={playSound}
@@ -35,7 +43,17 @@ export function Word({ nome, traducao, img, som }: Omit<WordType, "id">) {
           </button>
         </div>
         {/* Back Card */}
-        <div className="back absolute w-full h-full bg-white border-2 border-purple-500 rounded-[10px] shadow-md flex flex-col backface-hidden overflow-hidden rotateY-180">
+        <div
+          className="back absolute w-full h-full bg-white  rounded-[10px] shadow-md flex flex-col backface-hidden overflow-hidden rotateY-180"
+          style={{
+            boxShadow: `
+              rgba(168, 85, 247, 0.09) 0px 2px 1px,
+              rgba(168, 85, 247, 0.09) 0px 4px 2px,
+              rgba(168, 85, 247, 0.09) 0px 8px 4px,
+              rgba(168, 85, 247, 0.09) 0px 16px 8px,
+              rgba(168, 85, 247, 0.09) 0px 32px 16px`,
+          }}
+        >
           <img
             src={img}
             className="w-full h-[85%] object-cover rounded-t-[10px]"
