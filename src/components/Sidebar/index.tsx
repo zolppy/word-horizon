@@ -22,7 +22,7 @@ export function Sidebar() {
             animate={{ width: "300px" }}
             exit={{ width: "0" }}
             transition={{ type: "spring", duration: 1 }}
-            className="h-screen bg-purple-700 fixed z-10 top-0 overflow-x-hidden border-e-[20px] border-yellow-400"
+            className="h-screen bg-[#151b23] fixed z-10 top-0 overflow-x-hidden border-e-[20px] border-[#9c4994]"
           >
             <Btn
               onClick={closeMenu}

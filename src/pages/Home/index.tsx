@@ -29,7 +29,9 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-y-2">
       <div className="flex flex-col gap-y-4">
-        <H2>Sobre o projeto</H2>
+        <H2>
+          <h1 className="text-black">Sobre o projeto</h1>
+        </H2>
         <div className="text-justify flex flex-col gap-2">
           <p>
             Word Horizon é um projeto de flashcards interativos com as palavras
@@ -70,7 +72,9 @@ export default function Home() {
         </div>
       </div>
       <div className="mt-4 w-full flex flex-col gap-y-4">
-        <H2>Desenvolvedores</H2>
+        <H2>
+          <h1 className="text-black">Desenvolvedores</h1>
+        </H2>
         <ul className="w-full grid md:grid-cols-2 text-center itens-center m-auto lg:grid-cols-3">
           {autores.map(({ id, img, nome, descricao, link }) => (
             <CardAutores
