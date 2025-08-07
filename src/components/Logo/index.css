@@ -1,5 +1,9 @@
 .logo {
-  background: linear-gradient(90deg, #1a73e8, #ff4081);
+  background: linear-gradient(
+    90deg,
+    var(--color-blue-500),
+    var(--color-red-500)
+  );
   background-clip: text;
   color: transparent;
   font-family: "Poppins", sans-serif;
@@ -14,7 +18,11 @@
     font-size: 3em;
   }
   .logo:hover {
-    background: linear-gradient(90deg, #ff4081, #1a73e8);
+    background: linear-gradient(
+      90deg,
+      var(--color-blue-500),
+      var(--color-red-500)
+    );
     background-clip: text;
   }
 }

@@ -15,12 +15,12 @@ export function CardAutores({
           src={img}
           alt=""
         />
-        <h3 className="font-semibold text-purple-800">{nome}</h3>
+        <h3 className="font-semibold text-blue-700">{nome}</h3>
         <p className="text-left">{descricao}</p>
         <a
           href={link}
           target="_blank"
-          className="flex items-center gap-x-2 bg-purple-700 text-white py-3 px-6 w-fit rounded-lg transition-colors duration-200 active:bg-purple-800 lg:hover:cursor-pointer lg:hover:bg-purple-800"
+          className="flex items-center gap-x-2 bg-blue-500 text-white py-3 px-6 w-fit rounded-lg transition-colors duration-200 active:bg-blue-600 lg:hover:cursor-pointer lg:hover:bg-blue-600"
         >
           <FaGithub /> Github
         </a>
