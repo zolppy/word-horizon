@@ -34,7 +34,7 @@ Navigate to the project directory and then start Docker containers with:
 docker compose up --build
 ```
 
-Now you can access the application throught the given URL in the terminal, like `http://172.19.0.2:80/` or `http://localhost:80/`.
+Now you can access the application through the given URL in the terminal, like `http://172.19.0.2:80/` or `http://localhost:80/`.
 
 ## Lint
 
