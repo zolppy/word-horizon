@@ -1,31 +1,31 @@
 import { v4 as uuid } from "uuid";
-import type { AutoresCard } from "../types/autoresCard";
+import type { Developer } from "../types/developer";
 
-const autores: AutoresCard[] = [
+const developers: Developer[] = [
   {
     id: uuid(),
     img: "https://avatars.githubusercontent.com/u/94535032?v=4",
-    nome: "Gabriel Cavalcante",
-    descricao:
+    name: "Gabriel Cavalcante",
+    description:
       "Graduando em Licenciatura de computação pelo IFBA (Instituto Federal da Bahia) - Campus Jacobina. ",
-    link: "https://github.com/zolppy",
+    github: "https://github.com/zolppy",
   },
   {
     id: uuid(),
     img: "https://avatars.githubusercontent.com/u/138227865?v=4",
-    nome: "Mirele Oliveira",
-    descricao:
+    name: "Mirele Oliveira",
+    description:
       "Graduanda em Licenciatura de computação pelo IFBA (Instituto Federal da Bahia) - Campus Jacobina. ",
-    link: "https://github.com/megminnie",
+    github: "https://github.com/megminnie",
   },
   {
     id: uuid(),
     img: "https://avatars.githubusercontent.com/u/75589284?v=4",
-    nome: "Rulian Cruz",
-    descricao:
+    name: "Rulian Cruz",
+    description:
       "Graduando em Licenciatura de computação pelo IFBA (Instituto Federal da Bahia) - Campus Jacobina. ",
-    link: "https://github.com/ruliancruz",
+    github: "https://github.com/ruliancruz",
   },
 ];
 
-export { autores };
+export { developers };

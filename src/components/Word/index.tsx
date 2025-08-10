@@ -3,13 +3,18 @@ import { motion } from "framer-motion";
 import { FaVolumeHigh } from "react-icons/fa6";
 import { type Word as WordType } from "../../utils/types/word";
 
-export function Word({ nome, traducao, img, som }: Omit<WordType, "id">) {
+export function Word({
+  englishTerm,
+  portugueseTerm,
+  img,
+  sound,
+}: Omit<WordType, "id">) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   function playSound(e: React.MouseEvent) {
     e.stopPropagation();
-    if (som) {
-      const audio = new Audio(som);
+    if (sound) {
+      const audio = new Audio(sound);
       audio.play().catch((e) => console.error("Error playing sound:", e));
     }
   }
@@ -27,7 +32,7 @@ export function Word({ nome, traducao, img, som }: Omit<WordType, "id">) {
       >
         {/* Front Card */}
         <div className="front absolute w-full h-full bg-white  rounded-[10px] shadow-md grid place-items-center font-bold whitespace-nowrap backface-hidden overflow-hidden">
-          {nome}
+          {englishTerm}
           <button
             onClick={playSound}
             className="sound-btn border-none cursor-pointer text-blue-500 absolute right-0 top-5 -translate-x-1/2 -translate-y-1/2 text-2xl hover:text-3xl z-10"
@@ -40,10 +45,10 @@ export function Word({ nome, traducao, img, som }: Omit<WordType, "id">) {
           <img
             src={img}
             className="w-full h-[85%] object-cover rounded-t-[10px]"
-            alt={traducao}
+            alt={portugueseTerm}
           />
           <p className="font-bold text-center py-2 absolute bottom-0 left-0 right-0 bg-white">
-            {traducao}
+            {portugueseTerm}
           </p>
         </div>
       </motion.div>

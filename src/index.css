@@ -1,7 +1,15 @@
 @import "tailwindcss";
 
-* {
+*,
+*::before,
+*::after {
   @apply scroll-smooth;
+}
+
+:root {
+  --primary-color: #3730a3; /* indigo-800 */
+  --primary-color-hover: #312e81; /* indigo-900 */
+  --primary-color-text: #1e1b4b; /* indigo-950 */
 }
 
 body {

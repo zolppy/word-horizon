@@ -1,16 +1,16 @@
 import { useDocumentTitle } from "../../hooks/useDocumentTitle";
-import { CardAutores } from "../../components/CardAutores";
-import { autores } from "../../utils/data/autores";
+import { Developer } from "../../components/Developer";
+import { developers } from "../../utils/data/developers";
 import H2 from "../../components/H2";
 import { countAllItems } from "../../utils/helpers/countAllItems";
-import { animals } from "../../utils/data/animals";
-import { bedroom } from "../../utils/data/bedroom";
-import { body } from "../../utils/data/body";
-import { clothes } from "../../utils/data/clothes";
-import { emotions } from "../../utils/data/emotions";
-import { family } from "../../utils/data/family";
-import { kitchen } from "../../utils/data/kitchen";
-import { school } from "../../utils/data/school";
+import { animals } from "../../utils/data/words/animals";
+import { bedroom } from "../../utils/data/words/bedroom";
+import { body } from "../../utils/data/words/body";
+import { clothes } from "../../utils/data/words/clothes";
+import { emotions } from "../../utils/data/words/emotions";
+import { family } from "../../utils/data/words/family";
+import { kitchen } from "../../utils/data/words/kitchen";
+import { school } from "../../utils/data/words/school";
 
 export default function Home() {
   useDocumentTitle("Word Horizon | Home");
@@ -29,9 +29,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-y-2">
       <div className="flex flex-col gap-y-4">
-        <H2>
-          <h1 className="text-black">Sobre o projeto</h1>
-        </H2>
+        <H2>Sobre o projeto</H2>
         <div className="text-justify flex flex-col gap-2">
           <p>
             Word Horizon é um projeto de flashcards interativos com as palavras
@@ -72,17 +70,15 @@ export default function Home() {
         </div>
       </div>
       <div className="mt-4 w-full flex flex-col gap-y-4">
-        <H2>
-          <h1 className="text-black">Desenvolvedores</h1>
-        </H2>
+        <H2>Desenvolvedores</H2>
         <ul className="w-full grid md:grid-cols-2 text-center itens-center m-auto lg:grid-cols-3">
-          {autores.map(({ id, img, nome, descricao, link }) => (
-            <CardAutores
+          {developers.map(({ id, img, name, description, github }) => (
+            <Developer
               key={id}
               img={img}
-              nome={nome}
-              descricao={descricao}
-              link={link}
+              name={name}
+              description={description}
+              github={github}
             />
           ))}
         </ul>

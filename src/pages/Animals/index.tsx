@@ -1,8 +1,9 @@
 import { Section } from "../../components/Section";
 import { WordList } from "../../components/WordList";
 import { Word } from "../../components/Word";
-import { animals } from "../../utils/data/animals";
+import { animals } from "../../utils/data/words/animals";
 import { useDocumentTitle } from "../../hooks/useDocumentTitle";
+import type { Word as WordType } from "../../utils/types/word";
 
 export default function Animals() {
   useDocumentTitle("Word Horizon | Animais");
@@ -11,15 +12,17 @@ export default function Animals() {
     <>
       <Section className="w-full">
         <WordList>
-          {animals.map(({ id, nome, traducao, img, som }) => (
-            <Word
-              key={id}
-              nome={nome}
-              traducao={traducao}
-              img={img}
-              som={som}
-            />
-          ))}
+          {animals.map(
+            ({ id, englishTerm, portugueseTerm, img, sound }: WordType) => (
+              <Word
+                key={id}
+                englishTerm={englishTerm}
+                portugueseTerm={portugueseTerm}
+                img={img}
+                sound={sound}
+              />
+            )
+          )}
         </WordList>
       </Section>
     </>

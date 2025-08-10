@@ -1,4 +1,5 @@
 import { FaCreativeCommons, FaGithub } from "react-icons/fa6";
+import { Link } from "../Link";
 
 export function Footer() {
   return (
@@ -14,32 +15,14 @@ export function Footer() {
           </i>
           <div className="flex flex-row gap-1">
             Desenvolvido por
-            <a
-              href="https://github.com/MegMinnie/"
-              target="_blank"
-              className="text-blue-500 lg:hover:underline lg:hover:cursor-pointer"
-            >
-              Mirele Oliveira
-            </a>
-            ,
-            <a
-              href="https://github.com/zolppy"
-              target="_blank"
-              className="text-blue-500 lg:hover:underline lg:hover:cursor-pointer"
-            >
-              Gabriel Oliveira
-            </a>
-            e
-            <a
-              href="https://github.com/zolppy"
-              target="_blank"
-              className="text-blue-500 lg:hover:underline lg:hover:cursor-pointer"
-            >
-              Rulian Cruz
-            </a>
+            <Link href="https://github.com/MegMinnie">Mirele Oliveira</Link>,
+            <Link href="https://github.com/zolppy">Gabriel Oliveira</Link>e
+            <Link href="https://github.com/zolppy">Rulian Cruz</Link>
           </div>
         </div>
       </div>
     </footer>
   );
 }
+
+Footer.displayName = "Footer";

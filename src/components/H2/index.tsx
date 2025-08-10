@@ -5,7 +5,7 @@ interface H2Props {
 }
 
 export default function H2({ children }: H2Props) {
-  return <h2 className="font-bold  text-3xl text-[#431861]">{children}</h2>;
+  return <h2 className="font-bold text-3xl">{children}</h2>;
 }
 
 H2.displayName = "H2";

@@ -1,9 +1,9 @@
 interface Word {
   id: string;
-  nome: string;
-  traducao: string;
+  portugueseTerm: string;
+  englishTerm: string;
   img: string;
-  som: string;
+  sound: string;
 }
 
 export type { Word };
