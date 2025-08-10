@@ -12,7 +12,7 @@ const school: Word[] = [
   {
     id: uuid(),
     nome: "Eraser",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQig8ANQjqNkkLlJqR_heu2af4cgzFFFlVHrg&s",
+    img: "https://source.roboflow.com/gt9mUinbz8VFo9buHpGCO1hvG6U2/7u0JTKOsMYCElJ9KOB9B/original.jpg",
     som: "eraserSound",
     traducao: "Borracha",
   },
