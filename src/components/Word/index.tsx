@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { type MouseEvent, useState } from "react";
 import { motion } from "framer-motion";
 import { FaVolumeHigh } from "react-icons/fa6";
 import { type Word as WordType } from "../../utils/types/word";
@@ -7,16 +7,16 @@ export function Word({
   englishTerm,
   portugueseTerm,
   img,
-  sound,
 }: Omit<WordType, "id">) {
   const [isFlipped, setIsFlipped] = useState(false);
 
-  function playSound(e: React.MouseEvent) {
-    e.stopPropagation();
-    if (sound) {
-      const audio = new Audio(sound);
-      audio.play().catch((e) => console.error("Error playing sound:", e));
-    }
+  // Turn it into a custom hook in future
+  function playSound(event: MouseEvent) {
+    event.stopPropagation();
+
+    const text = "I love you";
+    const value = new SpeechSynthesisUtterance(text);
+    window.speechSynthesis.speak(value);
   }
 
   return (
@@ -31,17 +31,18 @@ export function Word({
         className="w-full h-full relative preserve-3d shadow-lg lg:hover:shadow-2xl rounded-[10px]"
       >
         {/* Front Card */}
-        <div className="front absolute w-full h-full bg-white  rounded-[10px] shadow-md grid place-items-center font-bold whitespace-nowrap backface-hidden overflow-hidden">
+        <div className="front absolute w-full h-full bg-white rounded-[10px] shadow-md grid place-items-center font-bold whitespace-nowrap backface-hidden overflow-hidden">
           {englishTerm}
           <button
             onClick={playSound}
             className="sound-btn border-none cursor-pointer text-blue-500 absolute right-0 top-5 -translate-x-1/2 -translate-y-1/2 text-2xl hover:text-3xl z-10"
+            aria-label="Play pronunciation"
           >
             <FaVolumeHigh />
           </button>
         </div>
         {/* Back Card */}
-        <div className="back absolute w-full h-full bg-white  rounded-[10px] shadow-md flex flex-col backface-hidden overflow-hidden rotateY-180">
+        <div className="back absolute w-full h-full bg-white rounded-[10px] shadow-md flex flex-col backface-hidden overflow-hidden rotateY-180">
           <img
             src={img}
             className="w-full h-[85%] object-cover rounded-t-[10px]"

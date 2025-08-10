@@ -9,17 +9,14 @@ export default function School() {
 
   return (
     <WordList>
-      {school.map(
-        ({ id, englishTerm, portugueseTerm, img, sound }: WordType) => (
-          <Word
-            key={id}
-            englishTerm={englishTerm}
-            portugueseTerm={portugueseTerm}
-            img={img}
-            sound={sound}
-          />
-        )
-      )}
+      {school.map(({ id, englishTerm, portugueseTerm, img }: WordType) => (
+        <Word
+          key={id}
+          englishTerm={englishTerm}
+          portugueseTerm={portugueseTerm}
+          img={img}
+        />
+      ))}
     </WordList>
   );
 }

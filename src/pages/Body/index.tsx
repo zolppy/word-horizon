@@ -11,17 +11,14 @@ export default function Body() {
   return (
     <Section>
       <WordList>
-        {body.map(
-          ({ id, englishTerm, portugueseTerm, img, sound }: WordType) => (
-            <Word
-              key={id}
-              englishTerm={englishTerm}
-              portugueseTerm={portugueseTerm}
-              img={img}
-              sound={sound}
-            />
-          )
-        )}
+        {body.map(({ id, englishTerm, portugueseTerm, img }: WordType) => (
+          <Word
+            key={id}
+            englishTerm={englishTerm}
+            portugueseTerm={portugueseTerm}
+            img={img}
+          />
+        ))}
       </WordList>
     </Section>
   );

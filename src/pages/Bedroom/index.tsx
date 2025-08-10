@@ -11,17 +11,14 @@ export default function Bedroom() {
   return (
     <Section>
       <WordList>
-        {bedroom.map(
-          ({ id, englishTerm, portugueseTerm, img, sound }: WordType) => (
-            <Word
-              key={id}
-              englishTerm={englishTerm}
-              portugueseTerm={portugueseTerm}
-              img={img}
-              sound={sound}
-            />
-          )
-        )}
+        {bedroom.map(({ id, englishTerm, portugueseTerm, img }: WordType) => (
+          <Word
+            key={id}
+            englishTerm={englishTerm}
+            portugueseTerm={portugueseTerm}
+            img={img}
+          />
+        ))}
       </WordList>
     </Section>
   );

@@ -9,17 +9,14 @@ export default function Family() {
 
   return (
     <WordList>
-      {family.map(
-        ({ id, englishTerm, portugueseTerm, img, sound }: WordType) => (
-          <Word
-            key={id}
-            englishTerm={englishTerm}
-            portugueseTerm={portugueseTerm}
-            img={img}
-            sound={sound}
-          />
-        )
-      )}
+      {family.map(({ id, englishTerm, portugueseTerm, img }: WordType) => (
+        <Word
+          key={id}
+          englishTerm={englishTerm}
+          portugueseTerm={portugueseTerm}
+          img={img}
+        />
+      ))}
     </WordList>
   );
 }

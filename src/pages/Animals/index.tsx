@@ -12,17 +12,14 @@ export default function Animals() {
     <>
       <Section className="w-full">
         <WordList>
-          {animals.map(
-            ({ id, englishTerm, portugueseTerm, img, sound }: WordType) => (
-              <Word
-                key={id}
-                englishTerm={englishTerm}
-                portugueseTerm={portugueseTerm}
-                img={img}
-                sound={sound}
-              />
-            )
-          )}
+          {animals.map(({ id, englishTerm, portugueseTerm, img }: WordType) => (
+            <Word
+              key={id}
+              englishTerm={englishTerm}
+              portugueseTerm={portugueseTerm}
+              img={img}
+            />
+          ))}
         </WordList>
       </Section>
     </>

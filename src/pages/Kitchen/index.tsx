@@ -9,17 +9,14 @@ export default function Kitchen() {
 
   return (
     <WordList>
-      {kitchen.map(
-        ({ id, englishTerm, portugueseTerm, img, sound }: WordType) => (
-          <Word
-            key={id}
-            englishTerm={englishTerm}
-            portugueseTerm={portugueseTerm}
-            img={img}
-            sound={sound}
-          />
-        )
-      )}
+      {kitchen.map(({ id, englishTerm, portugueseTerm, img }: WordType) => (
+        <Word
+          key={id}
+          englishTerm={englishTerm}
+          portugueseTerm={portugueseTerm}
+          img={img}
+        />
+      ))}
     </WordList>
   );
 }
