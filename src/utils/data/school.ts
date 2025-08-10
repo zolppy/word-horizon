@@ -12,14 +12,14 @@ const school: Word[] = [
   {
     id: uuid(),
     nome: "Eraser",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Faber_Castell_Erasers.jpg/220px-Faber_Castell_Erasers.jpg",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQig8ANQjqNkkLlJqR_heu2af4cgzFFFlVHrg&s",
     som: "eraserSound",
     traducao: "Borracha",
   },
   {
     id: uuid(),
     nome: "Pencil-case",
-    img: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Cloth_Pencil_Box.jpg",
+    img: "https://shop.tatsumura.co.jp/cdn/shop/files/pen_case04_3_659fc3f8-7182-4cb7-b7c5-3b397c2ebb4b.jpg?v=1705487143",
     som: "pencilCaseSound",
     traducao: "Estojo",
   },
