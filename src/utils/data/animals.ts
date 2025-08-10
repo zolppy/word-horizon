@@ -8,18 +8,18 @@ import dolphinSound from "../../assets/sounds/animals/dolphin.mp3";
 const animals: Word[] = [
   {
     id: uuid(),
-    nome: "Cat",
-    traducao: "Gato",
-    img: "https://www.starwoodpet.com/hs-fs/hubfs/Tabby%20cat%20laying%20on%20carpet.jpg?width=500&height=333&name=Tabby%20cat%20laying%20on%20carpet.jpg",
-    som: catSound,
-  },
-
-  {
-    id: uuid(),
     nome: "Bird",
     traducao: "Passáro",
     img: "https://www.publicdomainpictures.net/pictures/40000/nahled/bird-robin-erithacus-rubecula.jpg",
     som: birdSound,
+  },
+
+  {
+    id: uuid(),
+    nome: "Cat",
+    traducao: "Gato",
+    img: "https://www.starwoodpet.com/hs-fs/hubfs/Tabby%20cat%20laying%20on%20carpet.jpg?width=500&height=333&name=Tabby%20cat%20laying%20on%20carpet.jpg",
+    som: catSound,
   },
 
   {
