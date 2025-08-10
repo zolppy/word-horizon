@@ -4,7 +4,7 @@ import type { Word } from "../../types/word";
 const school: Word[] = [
   {
     id: uuid(),
-    englishTerm: "BackPack",
+    englishTerm: "Backpack",
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2l4i8IIVZNB9Put88b7AialkadPP-kVmTNg&s",
     portugueseTerm: "Mochila",
   },

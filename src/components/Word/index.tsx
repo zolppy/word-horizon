@@ -1,23 +1,16 @@
-import { type MouseEvent, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaVolumeHigh } from "react-icons/fa6";
 import { type Word as WordType } from "../../utils/types/word";
+import { useTTS } from "../../hooks/useTTS";
 
 export function Word({
   englishTerm,
   portugueseTerm,
   img,
 }: Omit<WordType, "id">) {
+  const { speak } = useTTS(englishTerm);
   const [isFlipped, setIsFlipped] = useState(false);
-
-  // Turn it into a custom hook in future
-  function playSound(event: MouseEvent) {
-    event.stopPropagation();
-
-    const text = "I love you";
-    const value = new SpeechSynthesisUtterance(text);
-    window.speechSynthesis.speak(value);
-  }
 
   return (
     <li
@@ -34,7 +27,7 @@ export function Word({
         <div className="front absolute w-full h-full bg-white rounded-[10px] shadow-md grid place-items-center font-bold whitespace-nowrap backface-hidden overflow-hidden">
           {englishTerm}
           <button
-            onClick={playSound}
+            onClick={speak}
             className="sound-btn border-none cursor-pointer text-blue-500 absolute right-0 top-5 -translate-x-1/2 -translate-y-1/2 text-2xl hover:text-3xl z-10"
             aria-label="Play pronunciation"
           >
@@ -42,7 +35,7 @@ export function Word({
           </button>
         </div>
         {/* Back Card */}
-        <div className="back absolute w-full h-full bg-white rounded-[10px] shadow-md flex flex-col backface-hidden overflow-hidden rotateY-180">
+        <div className="back absolute w-full h-full bg-white rounded-[10px] shadow-md flex flex-col backface-hidden overflow-hidden rotateY-180 z-10">
           <img
             src={img}
             className="w-full h-[85%] object-cover rounded-t-[10px]"
