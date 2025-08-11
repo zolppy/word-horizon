@@ -1,16 +1,27 @@
-import { useState } from "react";
+import { type MouseEvent, useState } from "react";
 import { motion } from "framer-motion";
 import { FaVolumeHigh } from "react-icons/fa6";
 import { type Word as WordType } from "../../utils/types/word";
-import { useTTS } from "../../hooks/useTTS";
+import { useSpeech } from "react-text-to-speech";
 
 export function Word({
   englishTerm,
   portugueseTerm,
   img,
 }: Omit<WordType, "id">) {
-  const { speak } = useTTS(englishTerm);
   const [isFlipped, setIsFlipped] = useState(false);
+  const { start } = useSpeech({
+    text: englishTerm,
+    lang: "en-US",
+    volume: 1,
+    rate: 0.5,
+    voiceURI: "Google US English",
+  });
+
+  function playSound(e: MouseEvent) {
+    e.stopPropagation();
+    start();
+  }
 
   return (
     <li
@@ -27,7 +38,7 @@ export function Word({
         <div className="front absolute w-full h-full bg-white rounded-[10px] shadow-md grid place-items-center font-bold whitespace-nowrap backface-hidden overflow-hidden">
           {englishTerm}
           <button
-            onClick={speak}
+            onClick={playSound}
             className="sound-btn border-none cursor-pointer text-blue-500 absolute right-0 top-5 -translate-x-1/2 -translate-y-1/2 text-2xl hover:text-3xl z-10"
             aria-label="Play pronunciation"
           >
