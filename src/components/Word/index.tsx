@@ -15,7 +15,6 @@ export function Word({
     lang: "en-US",
     volume: 1,
     rate: 0.5,
-    voiceURI: "Google US English",
   });
 
   function playSound(e: MouseEvent) {
